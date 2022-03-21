@@ -2,7 +2,7 @@
 # Employee Turnover Competition from DataCamp
 ### Can I help reduce Employee Turnover at your company?
 
-### link = https://app.datacamp.com/learn/competitions/reducing-employee-turnover
+### competition link = https://app.datacamp.com/learn/competitions/reducing-employee-turnover
 ### my submission = https://app.datacamp.com/workspace/w/76aca967-77d6-4437-bd78-3fff828c6905
 
 ## Background
