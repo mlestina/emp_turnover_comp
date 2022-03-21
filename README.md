@@ -6,22 +6,29 @@
 ### my submission = https://app.datacamp.com/workspace/w/76aca967-77d6-4437-bd78-3fff828c6905
 
 ## Background
-### I (hypothetically) work for the human capital department of a large corporation. The Board is worried about the relatively high turnover, and your team must look into ways to reduce the number of employees leaving the company. The team needs to understand better the situation, which employees are more likely to leave, and why. Once it is clear what variables impact employee churn, you can present your findings along with your ideas on how to attack the problem.
+### I (hypothetically) work for the human capital department of a large corporation. The Board is worried about the relatively high turnover, and my job is to look into ways to reduce the number of employees leaving the company. The team needs to understand better the situation, which employees are more likely to leave, and why. Once it is clear what variables impact employee churn, I must then present my findings along with my ideas on how to attack the problem.
 
-## The challenge:
-### Create a report that covers the following:
+## The Challenge:
+### I must create a report that covers the following:
+### Part I:  Which department has the highest employee turnover? Which one has the lowest?
+### Part II:  Investigate which variables seem to be better predictors of employee departure.
+### Part III:  What recommendations would I make regarding ways to reduce employee turnover?
 
-### I:  Which department has the highest employee turnover? Which one has the lowest?
-### II:  Investigate which variables seem to be better predictors of employee departure.
-### III:  What recommendations would you make regarding ways to reduce employee turnover?
-
-## my submission
+## My Submission
 
 ### First I will import modules, read in data, and then print the first few rows of data:
+department | promoted | review | projects | salary | tenure | satisfaction | bonus | avg_hrs | left
+--- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+operations | 0 | 0.5775 | 3 | low | 5.0 | 0.6268 | 0 | 180.8666 | no
+operations | 0 | 0.7519 | 3 | medium | 6.0 | 0.4437 | 0 | 182.7081 | no
+support | 0 | 0.7225 | 3 | medium | 6.0 | 0.4468 | 0 | 184.4160 | no
+logistics | 0 | 0.6752 | 4 | high | 8.0 | 0.4401 | 0 | 188.7075 | no
+sales | 0 | 0.6762 | 3 | high | 5.0 | 0.5776 | 1 | 179.8211 | no
 
-### In the attached data as read in my my ipynb notebook, each row represents an employee, the 'left' column indicates whether or not the employee separated or left the company, and the other rows show the department of the employee, performace appraisal, employee satisfaction, salary range, whether the employee was recently promoted, average hours worked per month, number of projects employee is working on, years of service, and whether the employee received a bonus.
 
-### In this project, we will see how employee turnover is correlated with each of these employee attributes
+### As can be seen above, each row represents an employee, the 'left' column indicates whether or not the employee separated or left the company, and the other rows show the department of the employee, performace appraisal, employee satisfaction, salary range, whether the employee was recently promoted, average hours worked per month, number of projects employee is working on, years of service, and whether the employee received a bonus.
+
+### In this project, I will illustrate how employee turnover is correlated with each of these employee attributes
 
 # Part I: Which Department had the most and least turnover?
 ### First I will plot a barchart of turnover rate for each department
@@ -32,24 +39,30 @@
 
 ## Calculation of Turnover for each Department:
 
-#### department = IT,  value = 0.308989
-#### department = admin, value = 0.281324
-#### department = engineering, value = 0.288259
-#### department = finance, value = 0.268657
-#### department = logistics, value = 0.308333
-#### department = marketing, value = 0.302993
-#### department = operations, value = 0.286465
-#### department = retail, value = 0.305646
-#### department = sales, value = 0.285183
-#### department = support, value = 0.288435
+
+Department | Turnover
+--- | ---
+IT | 0.308989
+Admin | 0.281324
+Engineering | 0.288259
+Finance | 0.268657
+Logistics | 0.308333
+Marketing | 0.302993
+Operations | 0.286465
+Retail | 0.305646
+Sales | 0.285183
+Support | 0.288435
 
 # Part II: Investigate which variables seem to be better predictors of employee departure
 ### I will now investigate the relationship between each remaining variable versus turnover. For each variable, I will first calculate mean, and then plot the data and discuss results
 
 ## 1. Employee Performance Reviews
 ### I will now investigate the relation between employee performance ratings and employee turnover
-### employee left = 'No', value = 0.635164
-### employee left = 'Yes', value = 0.692262
+
+Separated | Performance Rating
+--- | ---
+No | 0.6352
+Yes | 0.6923
 
 ![image](https://user-images.githubusercontent.com/28972117/159269316-0016147e-2ee8-4cd1-815c-050d9d1baa8d.png)
 
@@ -57,8 +70,10 @@
 
 ## 2. Recent Promotions
 ### Lets now see whether an employee was recently promoted has an influence on whether the employee stays or leaves the company
-### employee left = 'No', value = 0.034340
-### employee left = 'Yes', value = 0.020474
+Separated | Fraction Recently Promoted
+--- | ---
+No | 0.0343
+Yes | 0.0205
 
 ![image](https://user-images.githubusercontent.com/28972117/159269519-c3eb86a2-e85e-40fa-9e0d-ee4cb33caee4.png)
 
@@ -66,16 +81,21 @@
 
 ## 3. Number of Projects employee is involved in
 ### Lets look at the relationship between number of projects an employee is working on versus whether they leave the company
-### employee left = 'No', value = 3.279455
-### employee left = 'Yes', value = 3.263649
+Separated | Num of Projects
+--- | ---
+No | 3.2795
+Yes | 3.2626
+
 ![image](https://user-images.githubusercontent.com/28972117/159269619-d08fa7ed-173c-40a0-831f-32c65ecd178c.png)
 
 ### Both the calculated values and the bar chart seem to say that the turnover rate of employees does not vary much with regard to the number of projects an employee is involved in.
 
 ## 4. Tenure -- Years of Service
 ### Lets now calculate the average seniority for separated vs retained emplouees:
-### employee left = 'No', value = 6.546625
-### employee left = 'Yes', value = 6.579382
+Separated | Years of Service
+--- | ---
+No | 6.5455
+Yes | 6.5794
 
 ![image](https://user-images.githubusercontent.com/28972117/159269762-1b4c9caa-1c1b-4375-a930-e65ba9beecb9.png)
 
@@ -83,15 +103,20 @@
 
 ## 5. Employee Satisfaction
 ### Lets now calculate employee satisfaction ratings for separated and retained employees
-### employee left = 'No', value = 0.505634
-### employee left = 'Yes', value = 0.502244
+Separated | Employee Satisfaction
+--- | ---
+No | 0.5056
+Yes | 0.5022
+
 ![image](https://user-images.githubusercontent.com/28972117/159269868-72ca131a-5e6f-4fb6-8eb8-e0335c565e44.png)
 
 ### The violin plot seems to show that the very satisfied and the least satisfied are most apt to want to leave the company, while the ones in the middle are most apt to stay.
 
 ##6 Bonus
-### employee left = 'No', value = 0.215068
-### employee left = 'Yes', value = 0.204741
+Separated | Received Bonus
+--- | ---
+No | 0.2151
+Yes | 0.2047
 ### We will now look at how employee turnover varies according to whether an employee receives a bonus. Data and barchart show fraction receiving a bonus. Again, left = 'yes' indicates separation, left = 'no' indicates retention
 
 ![image](https://user-images.githubusercontent.com/28972117/159270024-63213ffa-a749-4e1a-8a56-02380f6f974f.png)
@@ -100,8 +125,10 @@
 
 ## 7. Average Hours per Month:
 ### Lets now calculate mean average hours per month of retained employees (i.e. left = 'no') and separated employees (i.e.left = 'yes')
-### employee left = 'No', value = 184.637605
-### employee left = 'Yes', value = 184.719730
+Separated | Avg Hours/Month
+--- | ---
+No | 184.6376
+Yes | 184.7197
 
 ![image](https://user-images.githubusercontent.com/28972117/159270142-8f9a8b15-24de-4f9d-94aa-79c7b0d8fae3.png)
 
@@ -109,13 +136,14 @@
 
 ## 8. Salary
 ### I will now calculate and produce employee turnover rate (i.e. 'left') according to salary (i.e. high, medium and low)
-### employee left = 'No', salary = 'high', value = 0.714470
-### employee left = 'Yes', salary = 'high', value = 0.285530
-### employee left = 'No', salary = 'medium', value = 0.704886
-### employee left = 'Yes', salary = 'high', value = 0.295114
-### employee left = 'No', salary = 'high', value = 0.716872
-### employee left = 'Yes', salary = 'high', value = 0.283128
-
+Separated | Salary | Turnover
+--- | --- | ---
+No | High | 0.7145
+Yes | High | 0.2855
+No | Medium | 0.7049
+Yes | Medium | 0.2951
+No | Low | 0.7169
+Yes | Low | 0.2831
 
 ![image](https://user-images.githubusercontent.com/28972117/159270250-4b17beaa-44d3-4c31-9f38-b0d80985be92.png)
 
