@@ -1,19 +1,19 @@
 
-## Employee Turnover Competition from DataCamp
+# Employee Turnover Competition from DataCamp
 ### Can I help reduce Employee Turnover at your company?
-### A DataCamp competition
-### link = https://app.datacamp.com/learn/competitions/reducing-employee-turnover
-my submission = https://app.datacamp.com/workspace/w/76aca967-77d6-4437-bd78-3fff828c6905
 
-Background
+### link = https://app.datacamp.com/learn/competitions/reducing-employee-turnover
+### my submission = https://app.datacamp.com/workspace/w/76aca967-77d6-4437-bd78-3fff828c6905
+
+## Background
 ### I (hypothetically) work for the human capital department of a large corporation. The Board is worried about the relatively high turnover, and your team must look into ways to reduce the number of employees leaving the company. The team needs to understand better the situation, which employees are more likely to leave, and why. Once it is clear what variables impact employee churn, you can present your findings along with your ideas on how to attack the problem.
 
 ## The challenge:
 ### Create a report that covers the following:
 
-### Which department has the highest employee turnover? Which one has the lowest?
-### Investigate which variables seem to be better predictors of employee departure.
-### What recommendations would you make regarding ways to reduce employee turnover?
+### I:  Which department has the highest employee turnover? Which one has the lowest?
+### II:  Investigate which variables seem to be better predictors of employee departure.
+### III:  What recommendations would you make regarding ways to reduce employee turnover?
 
 ## my submission
 
@@ -32,11 +32,24 @@ Background
 
 ## Calculation of Turnover for each Department:
 
+#### department = IT,  value = 0.308989
+#### department = admin, value = 0.281324
+#### department = engineering, value = 0.288259
+#### department = finance, value = 0.268657
+#### department = logistics, value = 0.308333
+#### department = marketing, value = 0.302993
+#### department = operations, value = 0.286465
+#### department = retail, value = 0.305646
+#### department = sales, value = 0.285183
+#### department = support, value = 0.288435
+
 # Part II: Investigate which variables seem to be better predictors of employee departure
 ### I will now investigate the relationship between each remaining variable versus turnover. For each variable, I will first calculate mean, and then plot the data and discuss results
 
 ## 1. Employee Performance Reviews
 ### I will now investigate the relation between employee performance ratings and employee turnover
+### employee left = 'No', value = 0.635164
+### employee left = 'Yes', value = 0.692262
 
 ![image](https://user-images.githubusercontent.com/28972117/159269316-0016147e-2ee8-4cd1-815c-050d9d1baa8d.png)
 
@@ -44,6 +57,8 @@ Background
 
 ## 2. Recent Promotions
 ### Lets now see whether an employee was recently promoted has an influence on whether the employee stays or leaves the company
+### employee left = 'No', value = 0.034340
+### employee left = 'Yes', value = 0.020474
 
 ![image](https://user-images.githubusercontent.com/28972117/159269519-c3eb86a2-e85e-40fa-9e0d-ee4cb33caee4.png)
 
@@ -51,13 +66,16 @@ Background
 
 ## 3. Number of Projects employee is involved in
 ### Lets look at the relationship between number of projects an employee is working on versus whether they leave the company
-
+### employee left = 'No', value = 3.279455
+### employee left = 'Yes', value = 3.263649
 ![image](https://user-images.githubusercontent.com/28972117/159269619-d08fa7ed-173c-40a0-831f-32c65ecd178c.png)
 
 ### Both the calculated values and the bar chart seem to say that the turnover rate of employees does not vary much with regard to the number of projects an employee is involved in.
 
 ## 4. Tenure -- Years of Service
 ### Lets now calculate the average seniority for separated vs retained emplouees:
+### employee left = 'No', value = 6.546625
+### employee left = 'Yes', value = 6.579382
 
 ![image](https://user-images.githubusercontent.com/28972117/159269762-1b4c9caa-1c1b-4375-a930-e65ba9beecb9.png)
 
@@ -65,12 +83,15 @@ Background
 
 ## 5. Employee Satisfaction
 ### Lets now calculate employee satisfaction ratings for separated and retained employees
-
+### employee left = 'No', value = 0.505634
+### employee left = 'Yes', value = 0.502244
 ![image](https://user-images.githubusercontent.com/28972117/159269868-72ca131a-5e6f-4fb6-8eb8-e0335c565e44.png)
 
 ### The violin plot seems to show that the very satisfied and the least satisfied are most apt to want to leave the company, while the ones in the middle are most apt to stay.
 
 ##6 Bonus
+### employee left = 'No', value = 0.215068
+### employee left = 'Yes', value = 0.204741
 ### We will now look at how employee turnover varies according to whether an employee receives a bonus. Data and barchart show fraction receiving a bonus. Again, left = 'yes' indicates separation, left = 'no' indicates retention
 
 ![image](https://user-images.githubusercontent.com/28972117/159270024-63213ffa-a749-4e1a-8a56-02380f6f974f.png)
@@ -79,6 +100,8 @@ Background
 
 ## 7. Average Hours per Month:
 ### Lets now calculate mean average hours per month of retained employees (i.e. left = 'no') and separated employees (i.e.left = 'yes')
+### employee left = 'No', value = 184.637605
+### employee left = 'Yes', value = 184.719730
 
 ![image](https://user-images.githubusercontent.com/28972117/159270142-8f9a8b15-24de-4f9d-94aa-79c7b0d8fae3.png)
 
@@ -86,6 +109,13 @@ Background
 
 ## 8. Salary
 ### I will now calculate and produce employee turnover rate (i.e. 'left') according to salary (i.e. high, medium and low)
+### employee left = 'No', salary = 'high', value = 0.714470
+### employee left = 'Yes', salary = 'high', value = 0.285530
+### employee left = 'No', salary = 'medium', value = 0.704886
+### employee left = 'Yes', salary = 'high', value = 0.295114
+### employee left = 'No', salary = 'high', value = 0.716872
+### employee left = 'Yes', salary = 'high', value = 0.283128
+
 
 ![image](https://user-images.githubusercontent.com/28972117/159270250-4b17beaa-44d3-4c31-9f38-b0d80985be92.png)
 
